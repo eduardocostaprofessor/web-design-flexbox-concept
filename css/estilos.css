@@ -5,6 +5,50 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: purple;
+/* Mobile First - CSS do mobile */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 5px 0 5px;
+    background-color: black;
+}
+
+header i {
+    font-size: 2rem; /*32px*/
+    color: white;
+}
+
+header img {
+    margin-right: calc(50% - 44.15px);  
+    height: 50px;
+}
+
+header nav {
+    display: none;
+}
+
+
+#sessao-principal {
+    display: flex;
+    flex-direction: column;
+}
+
+#sessao-principal figure {
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    border: 1px solid black;
+}
+
+#sessao-principal figure img {
+    height: 170px;
+    margin-left: -20px;
+}
+
+
+
+
+@media screen and (min-width: 768px){
+
 }
