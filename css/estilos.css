@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 /* Reset de propriedades */
 * {
     margin: 0;
@@ -5,8 +7,14 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: grey;
+}
+
 /* Mobile First - CSS do mobile */
 
+/* ********************CABEÇALHO************** */
 header {
     display: flex;
     justify-content: space-between;
@@ -15,48 +23,117 @@ header {
 }
 
 header i {
-    font-size: 2rem; /*32px*/
+    font-size: 2rem;
     color: white;
 }
 
 header img {
-    margin-right: calc(50% - 44.15px);  
-    height: 50px;
+    height: 55px;
+    margin-right: calc(50% - (97px / 2 ) );
 }
 
-header nav {
-    display: none;
-}
+header nav { display: none; }
+
+/* ********************MAIN************** */
 
 main {
-    padding-left: 10px;
+    padding-top: 15px;
     padding-right: 10px;
+    padding-left: 10px;
 }
 
+/* ********************SESSÃO PRINCIPAL************** */
 #sessao-principal {
-    display: flex;
-    flex-direction: column;
-    padding: 20px 0;
-    border-bottom: 1px dotted grey;
+    padding-bottom: 15px;
+    border-bottom: 2px dotted grey;
 }
 
 #sessao-principal figure {
     display: flex;
     justify-content: center;
-    padding: 15px 0;
 }
 
 #sessao-principal figure img {
-    height: 170px;
+    height: 150px;
     margin-left: -20px;
 }
 
-#sessao-principal a {
-    
-    text-align: center;
+article {
+    font-size: 0.8rem;
+}
+
+#sessao-principal article h1 {
+    width: 80%;
+    margin-top: 15px;
+    font-size: 1.5rem;
+    color: orangered;
+}
+
+#sessao-principal article p {
+    width: 90%;
+    margin-top: 15px;
+}
+
+#sessao-principal article a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    text-decoration: none;
     background-color: orangered;
     color: white;
+    border-radius: 5px;
 
+}
+
+/* ********************SESSÃO PRODUTOS************** */
+#produtos {
+    margin-top: 15px;
+}
+
+#produtos article { border: 1px solid grey; }
+
+#produtos article h2 {
+    padding-right: 10px;
+    padding-left: 10px;
+    /* para estudo do line height 
+       - gerando padding top e bottom através 
+       da altura da linha 
+    */
+    font-size: 0.8rem;
+    /* line-height: 2rem; */
+    text-transform: uppercase;
+    background-color: orangered;
+    color: white;
+}
+
+#produtos article img {
+    float: left;
+    margin: 10px;
+}
+
+#produtos article p {
+    padding: 10px;
+}
+
+/* ********************SESSÃO PRODUTOS************** */
+footer {
+    margin-top: 25px;
+    padding-left: 5px;
+    background-color: black;
+}
+
+footer img {
+    width: 30px;
+    margin-top: -15px;
+}
+
+
+
+footer p {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 0.7rem;
+    text-align: center;
 }
 
 
