@@ -18,6 +18,7 @@ body {
 header {
     display: flex;
     justify-content: space-between;
+    position: relative;
     padding: 5px 5px 0 5px;
     background-color: black;
 }
@@ -32,7 +33,29 @@ header img {
     margin-right: calc(50% - (97px / 2 ) );
 }
 
-header nav { display: none; }
+header nav { 
+    display: flex;
+    flex-direction: column;
+    
+    position: absolute;
+    top: 60px;
+    left: 0;
+
+    width: 100%;
+    padding: 0 10%;
+    background-color: black;
+}
+
+header nav a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    background-color: orangered;
+    border-radius: 3px;
+}
 
 /* ********************MAIN************** */
 
