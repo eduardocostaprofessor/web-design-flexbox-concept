@@ -33,8 +33,16 @@ header img {
     margin-right: calc(50% - (97px / 2 ) );
 }
 
-header nav { 
+header input {
+    display: none;
+}
+
+header input:checked ~ nav {
     display: flex;
+}
+
+header nav { 
+    display: none;
     flex-direction: column;
     
     position: absolute;
@@ -42,7 +50,8 @@ header nav {
     left: 0;
 
     width: 100%;
-    padding: 0 10%;
+    padding: 0 10% 5px 10%;
+
     background-color: black;
 }
 
