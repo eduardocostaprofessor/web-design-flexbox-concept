@@ -28,17 +28,22 @@ header nav {
     display: none;
 }
 
+main {
+    padding-left: 10px;
+    padding-right: 10px;
+}
 
 #sessao-principal {
     display: flex;
     flex-direction: column;
+    padding: 20px 0;
+    border-bottom: 1px dotted grey;
 }
 
 #sessao-principal figure {
     display: flex;
     justify-content: center;
     padding: 15px 0;
-    border: 1px solid black;
 }
 
 #sessao-principal figure img {
@@ -46,7 +51,13 @@ header nav {
     margin-left: -20px;
 }
 
+#sessao-principal a {
+    
+    text-align: center;
+    background-color: orangered;
+    color: white;
 
+}
 
 
 @media screen and (min-width: 768px){
