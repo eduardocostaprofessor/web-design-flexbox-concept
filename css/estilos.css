@@ -33,39 +33,49 @@ header img {
     margin-right: calc(50% - (97px / 2 ) );
 }
 
-header input {
-    display: none;
-}
+header input { display: none; }
 
 header input:checked ~ nav {
     display: flex;
+    left: 0;
 }
 
-header nav { 
-    display: none;
+header nav {
+    display: flex;
     flex-direction: column;
-    
     position: absolute;
     top: 60px;
-    left: 0;
-
+    left: -100%;
     width: 100%;
     padding: 0 10% 5px 10%;
-
     background-color: black;
+    transition: left .7s;
 }
 
 header nav a {
     color: white;
     text-align: center;
     text-decoration: none;
+    transition: padding-left .2s, color .4s;
 }
 
 header nav a:hover {
+    padding-left: 10px;
+    color: orange;
     background-color: orangered;
     border-radius: 3px;
 }
 
+header nav label {
+    text-align: right;
+    color: orangered;
+    opacity: 0;
+    transition: opacity 1s;
+    transition-delay: .5s;
+}
+header input:checked ~ nav>label {
+    opacity: 1;
+}
 /* ********************MAIN************** */
 
 main {
@@ -118,9 +128,7 @@ article {
 }
 
 /* ********************SESSÃO PRODUTOS************** */
-#produtos {
-    margin-top: 15px;
-}
+#produtos { margin-top: 15px; }
 
 #produtos article { border: 1px solid grey; }
 
@@ -131,8 +139,8 @@ article {
        - gerando padding top e bottom através 
        da altura da linha 
     */
+    line-height: 2rem;
     font-size: 0.8rem;
-    /* line-height: 2rem; */
     text-transform: uppercase;
     background-color: orangered;
     color: white;
@@ -151,6 +159,7 @@ article {
 footer {
     margin-top: 25px;
     padding-left: 5px;
+    padding-bottom: 15px;
     background-color: black;
 }
 
@@ -158,8 +167,6 @@ footer img {
     width: 30px;
     margin-top: -15px;
 }
-
-
 
 footer p {
     width: 80%;
@@ -172,13 +179,9 @@ footer p {
 @media screen and (min-width: 768px){
    
 /* ********************HEADER************** */
-    header {
-        padding: 10px 10px 0 10px;        
-    }
+    header { padding: 10px 10px 0 10px; }
 
-    header i {
-        font-size: 3rem;
-    }
+    header i { font-size: 3rem; }
 
     header img {
         height: 75px;
@@ -188,8 +191,6 @@ footer p {
     header nav { top: 80px; }
 
     header nav a { font-size: 1.5rem; }
-
-    
 
     /* ********************MAIN************** */
     main {
@@ -226,10 +227,7 @@ footer p {
     }
 
     /**************SESSÃO PRODUTOS***********/
-
-    #produtos {
-        margin-top: 40px;
-    }
+    #produtos { margin-top: 40px; }
 
     #produtos article h2 {
         padding-right: 20px;
@@ -249,7 +247,6 @@ footer p {
     }
 
     /* footer */
-
     footer {
         margin-top: 40px;
         padding-left: 10px;
@@ -267,4 +264,6 @@ footer p {
         text-align: center;
     }
  }
+
+ /* Desktop */
 
