@@ -26,6 +26,7 @@ header {
 header i {
     font-size: 2rem;
     color: white;
+    cursor: pointer;
 }
 
 header img {
@@ -56,7 +57,7 @@ header nav a {
     color: white;
     text-align: center;
     text-decoration: none;
-    transition: padding-left .2s, color .4s;
+    transition: padding-left .2s;
 }
 
 header nav a:hover {
@@ -175,6 +176,10 @@ footer p {
     text-align: center;
 }
 
+
+
+
+
 /* Tablets */
 @media screen and (min-width: 768px){
    
@@ -266,4 +271,136 @@ footer p {
  }
 
  /* Desktop */
+@media screen and (min-width: 992px){
+    header, main, footer {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    header {
+        padding-bottom: 10px;
+        padding-top: 0;
+    }
 
+    header label {
+        display: none;
+    }
+
+    header img{
+        height: 60px;
+        margin-top: 10px;
+    }
+
+    header nav {
+        flex-direction: row;
+        justify-content: flex-start;
+        position: static;
+        margin-left: -80px;
+        padding: 0;
+        /* border: 1px solid red; */
+    }
+
+    header nav a {
+        font-size: .8rem;
+        padding: 35px 20px 10px 20px;
+        /* border: 1px solid white; */
+    }
+
+    header nav a:hover {
+        color: white;
+        padding-left: 20px;
+        border-radius: 0px 0px 8px 8px;
+    }
+
+    #sessao-principal {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        border-width: 2px;
+    }
+
+    #sessao-principal figure {
+        width: 50%;
+        min-width: 480px;
+    }
+
+    #sessao-principal figure img { height: 250px; }
+
+    #sessao-principal article {
+        width: 40%;
+        min-width: 385px;
+    }
+
+    #sessao-principal article h1 {
+        margin-top: 0;
+        font-size: 1.5rem;
+    }
+
+    #sessao-principal article p {
+        width: 90%;
+        margin-top: 15px;
+        font-size: 0.8rem;
+    }
+
+    #sessao-principal article a {
+        font-size: 0.8rem;
+        margin-top: 15px;
+        padding: 10px 20px;
+    }
+
+    #produtos {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    #produtos article { width: 33%; }
+
+    #produtos article h2 {
+        padding: 0 10px;
+        font-size: 0.8rem;
+        line-height: 1.6rem;
+    }
+
+    #produtos article img { 
+        width: 65px;
+        margin: 10px; 
+    }
+
+    #produtos article p {
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+
+    footer { 
+        padding-bottom: 10px;
+    }
+    
+    footer img { 
+        width: 30px;
+        margin-top: -20px;
+    }
+
+    footer p { 
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    header, main, footer {
+        max-width: 1200px;
+        padding-left: 10%;
+        padding-right: 10%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #sessao-principal figure  {
+        min-width: 480px;
+    }
+
+    #produtos article {
+        width: 30%;
+        min-width: 278px;
+    }
+}
